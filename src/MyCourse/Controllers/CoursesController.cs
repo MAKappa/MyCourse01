@@ -12,6 +12,12 @@ namespace MyCourse.Controllers
 {
     public class CoursesController : Controller
     {
+        public readonly CourseService courseService;
+        public CoursesController(CourseService courseService)
+        {
+            this.courseService = courseService;
+            
+        }
         public IActionResult Index()
         {
             var courseService = new CourseService();
