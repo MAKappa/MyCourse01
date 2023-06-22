@@ -12,8 +12,8 @@ namespace MyCourse.Controllers
 {
     public class CoursesController : Controller
     {
-        public readonly CourseService courseService;
-        public CoursesController(CourseService courseService)
+        public readonly ICourseService courseService;
+        public CoursesController(ICourseService courseService)
         {
             this.courseService = courseService;
             

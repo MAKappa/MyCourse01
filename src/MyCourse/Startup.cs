@@ -22,7 +22,7 @@ namespace MyCourse
         {
             //services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddTransient<CourseService>();
+            services.AddTransient<ICourseService, CourseService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
