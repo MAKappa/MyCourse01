@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyCourse.Models.Services.Application;
 using MyCourse.Models.ViewModels;
+using MyCourse.Models.Services.Infrastructure;
 
 namespace MyCourse.Controllers
 {
@@ -20,14 +21,14 @@ namespace MyCourse.Controllers
         }
         public IActionResult Index()
         {
-            var courseService = new CourseService();
+ 
             List<CourseViewModel> courses =  courseService.GetCourses();
             return View(courses);
         }
 
         public IActionResult Detail(int id)
         {
-            var courseService = new CourseService();
+
             CourseDetailViewModel course=courseService.GetCourse(id);
             return View(course);
         }
