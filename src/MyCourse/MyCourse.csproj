@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>0b0e46eb-005a-4ac1-8f7d-7a765c775437</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
     <Compile Remove="Models/Services/Application/CourseService.cs" />
+    <Folder Include="wwwroot\Courses\" />
    
   </ItemGroup>
 
@@ -14,9 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.19" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.19" />
-    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.5" />
-    <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.19" />
   </ItemGroup>
 
 </Project>

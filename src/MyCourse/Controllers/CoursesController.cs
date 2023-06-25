@@ -19,17 +19,17 @@ namespace MyCourse.Controllers
             this.courseService = courseService;
             
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
  
-            List<CourseViewModel> courses =  courseService.GetCourses();
+            List<CourseViewModel> courses = await courseService.GetCoursesAsync();
             return View(courses);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
 
-            CourseDetailViewModel course=courseService.GetCourse(id);
+            CourseDetailViewModel course= await courseService.GetCoursesAsync(id);
             return View(course);
         }
     }
